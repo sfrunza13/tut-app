@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pokemon, TypeColors } from 'src/app/Pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
-import { MatCardModule } from '@angular/material/card'
 
 @Component({
   selector: 'app-pokemon-detail',
