@@ -1,0 +1,28 @@
+<div *ngIf="pokemon; else elseBlock" class="PokemonCard">
+
+    <mat-card style="width: 30%;" [ngStyle]="{'backgroundColor':colors[pokemon.types[0].name]}">
+        <mat-card-header style="justify-content: center;">
+            <h1 style="background-color: white; border-radius: 20px; padding: 5px; border: groove;">{{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}}</h1>
+        </mat-card-header>
+        <img mat-card-image style="border-radius: 15px; border: groove;background-color: white; margin: 15px" [src]="pokemon.sprite"
+            [alt]="pokemon.name">
+        <mat-card-content>
+            <div style="display:flex; flex-direction: row; justify-content: center; flex-wrap: wrap; margin:5px">
+                <span *ngFor="let stat of pokemon.stats "
+                    style="border-radius: 25px; border: groove;background-color: white; padding: 5px;">{{stat.name.charAt(0).toUpperCase()
+                    + stat.name.slice(1)}} {{stat.baseStat}}</span>
+            </div>
+        </mat-card-content>
+        <mat-card-footer style="background-color: rgb(201, 199, 199);">
+            <div  style="display:flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+                <span *ngFor="let type of pokemon.types " style="border-radius: 25px; border: groove;background-color: white; padding: 5px;"
+                    [ngStyle]="{'background-color':colors[type.name]}">{{type.name.charAt(0).toUpperCase() +
+                    type.name.slice(1)}}</span>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+
+</div>
+
+<ng-template #elseBlock>Loading Image.</ng-template>
+<a routerLink="/pokemon">Back to Pokemon</a>

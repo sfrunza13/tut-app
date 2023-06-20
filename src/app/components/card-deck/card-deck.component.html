@@ -1,0 +1,3 @@
+<app-add-forms (addedNewCard)="addCard($event)"></app-add-forms>
+
+<app-info-card *ngFor="let card of cards" [card]="card" (delete) = onDelete($event)></app-info-card>

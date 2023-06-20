@@ -1,0 +1,32 @@
+<h1 style="margin: 10px 0 0 0 ">Table of Pokemon</h1>
+<div style="width: 80%;" class="tableOMine">
+    <span style="float: left; padding: 10px;">
+        <label>Filter: </label>
+        <input name="filter" type="text" [ngModel]="filter" (ngModelChange)="filterChange($event)" />
+    </span>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let pokemon"> {{pokemon.url.split('/')[6]}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Pokemon Name </th>
+            <td mat-cell *matCellDef="let pokemon"> {{pokemon.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="url">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+            <td mat-cell *matCellDef="let pokemon"> 
+                <a [routerLink]='["/pokemon-detail",pokemon.url.split("/")[6]]'>
+                    <!-- {{pokemon.url}} -->
+                    <button>To Details</button>
+                </a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page">
+    </mat-paginator>
+</div>
+<a routerLink="/">To About</a>

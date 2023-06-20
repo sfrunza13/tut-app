@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "name": "The card that is red",
+      "color": "Red",
+      "text": "Lorem Ipsum and some stuff."
+    },
+    {
+      "id": 2,
+      "name": "The fun card",
+      "color": "Pink",
+      "text": "The second card has a funny description on it entailing what some would consider a joke"
+    },
+    {
+      "id": 3,
+      "name": "Sun",
+      "color": "Orange",
+      "text": "Oh Mr. Sun, Sun, Mr. Golden Sun, please shine down on me!"
+    },
+    {
+      "id": 4,
+      "name": "Card Title",
+      "color": "pink",
+      "text": "Default body text"
+    },
+    {
+      "name": "sadfsa",
+      "color": "red",
+      "text": "Default body text",
+      "id": 5
+    }
+  ]
+}

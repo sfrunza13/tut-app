@@ -1,0 +1,6 @@
+
+<app-info-card *ngIf="card" [card]="card"></app-info-card>
+
+<h1 *ngIf="loading">Loading...</h1>
+
+<h1 *ngIf="error">Error, no card for id: {{id}}</h1>

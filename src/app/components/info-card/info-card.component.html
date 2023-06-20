@@ -1,0 +1,6 @@
+<div class="cardContainer"  [ngStyle]="{'backgroundColor': backgroundColor}">
+    <h3>{{cardName}}</h3>
+    <p>{{desc}}</p>
+    <button *ngIf="card && hasRoute('/cards')" class="button" (click)="emitDelete()">Remove</button>
+    <a *ngIf="!hasRoute('/cards')" routerLink="/cards"><button  class="button">Back to Cards</button></a>
+</div>

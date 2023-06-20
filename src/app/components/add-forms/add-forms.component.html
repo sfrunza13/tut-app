@@ -1,0 +1,28 @@
+<p>add-forms works!</p>
+<!-- To display two way binding -->
+<form style="margin-bottom: 15px;">
+    <input [(ngModel)]=example name="example" />
+    <span>{{example}}</span>
+</form>
+
+
+<h4>Add a new card</h4>
+
+<!-- To actually submit info for new card -->
+<form (ngSubmit)="onSubmit()" style="border: solid ; border-color: green; display: flex; flex-direction: column; padding: 10px; align-items: center;">
+    
+    <span>
+        <label for="name">Name: </label>
+        <input name="name" type="text" [(ngModel)]="name" placeholder="Enter card name here..." required/>
+    </span>
+    <span>
+        <label for="color">Color: </label>
+        <input name="color" type="text" [(ngModel)]="color" placeholder="Enter card color here..."/>
+    </span>
+    <span>
+        <label for="text">Text: </label>
+        <input name="text" type="text" [(ngModel)]="text" placeholder="Enter card text here..."/>
+    </span>
+
+    <input type="submit" value="Add Card" class="button" style="background-color: greenyellow; margin-top: 5px;"/>
+</form>

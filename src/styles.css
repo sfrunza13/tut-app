@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #b5b9b5}
+
+.button:active {
+  background-color: #b5b9b5;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
