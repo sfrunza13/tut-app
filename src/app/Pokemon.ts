@@ -16,7 +16,7 @@ export interface Type{
     name:string
 }
 
-export const TypeColors:any = {
+export const TypeColors:{[key:string]:string} = {
     normal : '#A8A77A',
     fire : '#EE8130',
     water : '#6390F0',
