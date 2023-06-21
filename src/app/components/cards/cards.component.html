@@ -1,15 +1,15 @@
-<header>
+<div>
     <h1>Cards Component </h1>
     <app-checkbox [(hide)]="hidden"></app-checkbox>
-</header>
+</div>
   
-<body *ngIf="hidden">
+<div *ngIf="hidden">
     <h3>Our Cards we passed properties to:</h3>
     <app-info-card cardName="Information Card"></app-info-card>
     <app-info-card cardName="Other card" backgroundColor="red"></app-info-card>
     <h3>Card Deck from JS Card Collection:</h3>
     <app-card-deck></app-card-deck>
-</body>
-<footer>
+</div>
+<div>
     <a routerLink="/">To About</a>
-</footer>
+</div>

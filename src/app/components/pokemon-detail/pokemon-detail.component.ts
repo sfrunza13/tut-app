@@ -47,10 +47,6 @@ export class PokemonDetailComponent implements OnInit {
           });
         })
       }
-
-
-
-
     })
   }
 
