@@ -29,6 +29,12 @@
       "color": "red",
       "text": "Default body text",
       "id": 5
+    },
+    {
+      "name": "Card Title",
+      "color": "red",
+      "text": "Default body text",
+      "id": 6
     }
   ]
 }

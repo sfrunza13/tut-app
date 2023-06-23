@@ -5,20 +5,18 @@ import { Observable } from 'rxjs';
 import { Pokemon } from '../Pokemon';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PokemonService {
+  private apiUrl = 'https://pokeapi.co/api/v2/';
 
-  private apiUrl = 'https://pokeapi.co/api/v2/'
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient:HttpClient) { }
-
-  getPokemonListings():Observable<PokemonListing>{
-    return this.httpClient.get<PokemonListing>(`${this.apiUrl}pokemon?limit=100000&offset=0`)
+  getPokemonListings(): Observable<PokemonListing> {
+    return this.httpClient.get<PokemonListing>(`${this.apiUrl}pokemon?limit=100000&offset=0`);
   }
 
-  getPokemon(id:number):Observable<any>{
+  getPokemon(id: number): Observable<any> {
     return this.httpClient.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}/`);
   }
-
 }

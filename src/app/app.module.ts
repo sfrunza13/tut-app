@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
-import { MatPaginatorModule } from '@angular/material/paginator'
-import { MatCardModule } from '@angular/material/card'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
@@ -20,28 +20,32 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
-
-
 const appRoutes: Routes = [
   {
-    path: '', component: AboutComponent
+    path: '',
+    component: AboutComponent,
   },
   {
-    path: 'about', component: AboutComponent
+    path: 'about',
+    component: AboutComponent,
   },
   {
-    path: 'cards', component: CardsComponent
+    path: 'cards',
+    component: CardsComponent,
   },
   {
-    path: 'card/:id', component: CardDetailComponent
+    path: 'card/:id',
+    component: CardDetailComponent,
   },
   {
-    path: 'pokemon', component: PokemonListComponent
+    path: 'pokemon',
+    component: PokemonListComponent,
   },
   {
-    path: 'pokemon-detail/:id', component: PokemonDetailComponent
-  }
-]
+    path: 'pokemon-detail/:id',
+    component: PokemonDetailComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -54,7 +58,7 @@ const appRoutes: Routes = [
     CardsComponent,
     CardDetailComponent,
     PokemonListComponent,
-    PokemonDetailComponent
+    PokemonDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,9 +69,9 @@ const appRoutes: Routes = [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
