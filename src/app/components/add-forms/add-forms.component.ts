@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Card } from '../../Card';
 
+type cardToAdd = Pick<Card,"name"|"color"|"text">;
+
 @Component({
   selector: 'app-add-forms',
   templateUrl: './add-forms.component.html',
@@ -9,12 +11,13 @@ import { Card } from '../../Card';
 export class AddFormsComponent {
   // The id should automatically be incremented
   // with a real backend.
-  id = 4;
+  // id = 4;
   example!: string;
   name: string = "Card Title";
   color: string = "red";
   text: string = "Default body text";
-  @Output() addedNewCard:EventEmitter<Card|any> = new EventEmitter();
+
+  @Output() addedNewCard:EventEmitter<cardToAdd> = new EventEmitter();
 
   onSubmit() {
     if (!this.name) {
